@@ -1,0 +1,91 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            width: 450px;
+            backdrop-filter: blur(12px);
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 12px;
+            width: 90%;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        button {
+            padding: 14px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Fraud Detection System</h2>
+    <div class="container">
+        <form method="POST">
+            <label for="features">Enter all features</label>
+            <input type="text" name="features" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if error %}
+            <p class="error">Error: {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

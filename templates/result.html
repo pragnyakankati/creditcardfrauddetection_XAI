@@ -1,0 +1,107 @@
+<!-- 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        .result { font-size: 24px; font-weight: bold; margin-top: 20px; }
+        img { width: 80%; max-width: 600px; margin-top: 20px; border-radius: 10px; }
+        iframe { width: 90%; height: 500px; border: 2px solid #ddd; border-radius: 10px; margin-top: 20px; }
+        .button { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .spacer { margin-bottom: 30px; } /* Added spacing between elements */
+    </style>
+</head>
+<body>
+    <h2>Fraud Prediction Result</h2>
+    <p class="result">Transaction Outcome: <strong>{{ prediction }}</strong></p>
+    <p>Fraud Probability: {{ probability|round(4) }}</p>
+
+    <div class="spacer"></div>
+    
+    <h3>LIME Explanation (local explanation):</h3>
+    <img src="{{ lime_path }}" alt="LIME Explanation">
+    
+    <div class="spacer"></div>
+    
+    <h3>LIME Explanation:</h3>
+    <iframe src="{{ lime_html_path }}" title="LIME Explanation"></iframe>
+    
+    <div class="spacer"></div>
+    
+    <h3>SHAP Summary Plot:</h3>
+    <img src="{{ shap_summary_path }}" alt="SHAP Summary">
+    
+    <div class="spacer"></div>
+    
+    <h3>SHAP Waterfall Plot:</h3>
+    <img src="{{ shap_waterfall_path }}" alt="SHAP Waterfall">
+    
+    <div class="spacer"></div>
+
+    <h3>SHAP Force Plot:</h3>
+    <iframe src="{{ shap_force_path }}" title="SHAP Force Plot"></iframe>
+
+    <br><br>
+    <a href="/" class="button">Go Back</a>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Prediction Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        .result { font-size: 24px; font-weight: bold; margin-top: 20px; }
+        img { width: 80%; max-width: 600px; margin-top: 20px; border-radius: 10px; }
+        iframe { width: 90%; height: 500px; border: 2px solid #ddd; border-radius: 10px; margin-top: 20px; }
+        .button { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        .spacer { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h2>Fraud Prediction Result</h2>
+    <p class="result">Transaction Outcome: <strong>{{ prediction }}</strong></p>
+    <p>Fraud Probability: {{ probability|round(4) }}</p>
+
+    <div class="spacer"></div>
+    
+    <h3>LIME Explanation (local explanation):</h3>
+    <img src="{{ lime_path }}" alt="LIME Explanation">
+    
+    <div class="spacer"></div>
+    
+    
+    <h3>LIME Explanation:</h3>
+     
+    <iframe src="{{ lime_html_path }}" title="LIME Explanation"></iframe>
+    
+    <div class="spacer"></div>
+    
+    <h3>SHAP Summary Plot:</h3>
+    <img src="{{ shap_summary_path }}" alt="SHAP Summary">
+    
+    <div class="spacer"></div>
+    
+    <h3>SHAP Waterfall Plot:</h3>
+    <img src="{{ shap_waterfall_path }}" alt="SHAP Waterfall">
+    
+    <div class="spacer"></div>
+
+    <h3>SHAP Force Plot:</h3>
+    <iframe src="{{ shap_force_path }}" title="SHAP Force Plot"></iframe>
+
+    <br><br>
+    <a href="/" class="button">Go Back</a>
+</body>
+</html> 
